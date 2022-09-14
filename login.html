@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Login </title>
+</head>
+<body class="login">
+
+    <div class="wrapper">
+        <div class="modelForm">
+            <h1>Login</h1>
+            <div class="actionBtns">
+
+                <button class="actionBtn loginStu">Student</button>
+                <button class="actionBtn loginCom">Company</button>
+                <button class="moveBtn ">Student</button>
+            </div>
+            <div class="loginForm">
+                <form action="" class="form">
+                    <input type="email" placeholder="Enter Your Email" autocomplete="off">
+                    <input type="password" placeholder="Enter Your Password" autocomplete="off">
+                    <button type="submit" class="loginBtn">Login</button>
+                    <p class="forget">Forget Password ?</p>
+                    <br>
+                    <button class="registerLogin">Rigister as <span class="registerType">Student</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- js file  -->
+    <script>
+const loginStu= document.querySelector(".loginStu");
+const loginCom= document.querySelector(".loginCom");
+const moveBtn= document.querySelector(".moveBtn");
+const register= document.querySelector(".registerType");
+// alert('hello');
+loginCom.addEventListener("click",()=>{
+  moveBtn.classList.add("rightBtn");
+  moveBtn.innerHTML= "Company";
+  register.innerHTML="Company";
+
+
+});
+loginStu.addEventListener("click",()=>{
+  moveBtn.classList.remove("rightBtn");
+  moveBtn.innerHTML= "Student";
+  register.innerHTML= "Student";
+
+
+
+});
+    </script>
+</body>
+</html>

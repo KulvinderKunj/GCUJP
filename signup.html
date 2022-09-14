@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>SignUp</title>
+  </head>
+  <body class="signup">
+    <div class="wrapper">
+
+      <div class="modelFormSign">
+
+        <h1>Sign Up</h1>
+        <div class="actionBtns">
+          <button class="actionBtn signupStu">Student</button>
+          <button class="actionBtn signupCom">Company</button>
+          <button class="moveBtnsign">Student</button>
+        </div>
+
+        <div class="signForm">
+          <form action="" class="form">
+            <div class="oneline">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              autocomplete="off"
+            />
+            <div class="oneline">
+              <input type="text" placeholder="Institute Name" />
+              <input type="text" placeholder="Roll No." />
+            </div>
+            <div class="oneline">
+              <input type="number" placeholder="Mobile No." />
+              <input type="text" placeholder="City" />
+            </div>
+
+            <input type="password" placeholder="Password" autocomplete="off" />
+            <input type="password" placeholder="Conform Password" />
+            <button type="submit" class="signBtn">Sign Up</button>
+            <br />
+            <button class="registerSign">
+              login as <span class="registerTypeSign">Student</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- js file  -->
+    <script>
+
+
+      //sign up
+
+      const signupStu = document.querySelector(".signupStu");
+      const signupCom = document.querySelector(".signupCom");
+      const moveBtnsign = document.querySelector(".moveBtnsign");
+      const registersign = document.querySelector(".registerTypeSign");
+      signupCom.addEventListener("click", () => {
+        moveBtnsign.classList.add("rightBtn");
+        moveBtnsign.innerHTML = "Company";
+        registersign.innerHTML = "Company";
+      });
+
+      signupStu.addEventListener("click", () => {
+        moveBtnsign.classList.remove("rightBtn");
+        moveBtnsign.innerHTML = "Student";
+        registersign.innerHTML = "Student";
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

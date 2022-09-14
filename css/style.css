@@ -1,0 +1,683 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --box-shadow1: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --box-shadow2: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: visible;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  background-color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: var(--box-shadow1);
+}
+.naavbar {
+  height: 6rem;
+  padding: 2rem;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.naavbar .mainMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+}
+.naavbar .mainMenu li a {
+  font-size: 1.7rem;
+  color: black;
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #b21602;
+  text-decoration: none;
+}
+
+.header .naavbar li a:hover {
+  color: #b21602;
+}
+
+
+.naavbar #login,
+.naavbar #signup {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.3rem 1.2rem;
+  border-radius: 1.5rem;
+  background-color: #b21602;
+  cursor: pointer;
+}
+.naavbar .openMenu {
+  font-size: 3rem;
+  margin: 20px;
+  color: #b21602;
+  display: none;
+}
+.naavbar .mainMenu .closeMenu {
+  font-size: 3rem;
+  color: #b21602;
+  display: none;
+}
+ul li a.active{
+  background-color: #b21602;
+}
+/* header end  */
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: url(../image/bg.jpg) no-repeat;
+  background-position: center;
+  text-align: center;
+  transition: 1s;
+
+  animation-name: animate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 15rem;
+  justify-content: center;
+  flex-direction: column;
+  color: #000000;
+  background-color: rgba(178, 22, 2, 0.6);
+}
+.content h3 {
+  font-size: 5rem;
+}
+
+.content span {
+  color: white;
+}
+
+.jobs {
+  width: 100vw;
+
+  background-color: #eee;
+  padding: 5rem 2rem;
+}
+
+.jobs h3,
+.companies-section h3,
+.about h3,
+.contactUs h3 {
+  margin: auto;
+  text-align: center;
+  padding: 3rem 0 3rem 0;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.testimonials h3 {
+  margin: 0;
+  font-size: 3rem;
+  padding: 5rem  0;
+  color: #000000;
+  font-weight: bolder;
+}
+
+.jobs h3 span,
+.companies-section h3 span {
+  color: #b21602;
+}
+.jobtype {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.jobtype div {
+  padding: 0.5rem 3rem;
+  text-align: center;
+  height: 15rem;
+  width: 28rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  margin: 1rem;
+  box-shadow: var(--box-shadow2);
+  border-bottom: 10px solid #b21602;
+}
+.jobtype div .catogary {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.jobtype div span {
+  font-size: 2rem;
+  color: #b21602;
+  font-weight: 800;
+}
+
+.jobtype div p {
+  padding-top: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.companies-section {
+  padding: 5rem 2rem;
+  width: 100vw;
+}
+
+.companies-section h3 {
+  font-size: 2rem;
+}
+
+.slick-slide {
+  margin: 0 20px;
+}
+.slick-slide img {
+  width: 100%;
+}
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.testimonials {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  background-color: #eee;
+  padding: 0 auto;
+}
+
+.testimonial {
+  position: relative;
+
+  max-width: 1000px;
+  border-radius: 3rem;
+  width: 100%;
+  height: 80vh;
+  padding: auto auto;
+  overflow: hidden;
+  --swiper-navigation-color: #b21602;
+  --swiper-pagination-color: #b21602;
+}
+.testimonial .slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.testimonial .image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.slide p {
+  font-size: 1.2rem;
+  padding: 0 80px;
+  text-align: center;
+  font-weight: 400;
+  color: #333;
+}
+.slide .quote-icon {
+  font-size: 1.8rem;
+  color: #b21602;
+}
+.slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slide .details .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.slide .details .job {
+  font-size: 1.2rem;
+}
+swiper-button-next,
+swiper-button-prev {
+  position: absolute;
+  background-color: #b21602;
+}
+.about {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  gap: 1rem;
+  overflow: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+  border-bottom:10px solid #b21602 ;
+}
+.about h3{
+  text-align: left;
+  margin: 0;
+}
+.about .pic {
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+
+}
+.about img{
+  width: 100%;
+  height: 60vh;
+  bottom: 0;
+}
+
+.about .aboutData {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 2rem;
+
+}
+.aboutData h4{
+  color: #b21602;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+
+
+.contactUs{
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  overflow: auto;
+}
+.contactUs > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+
+}
+.contactUs .map{
+  text-align: center;
+}
+.contactUs .contactDetails {
+  text-align: center;
+  width: 100%;
+}
+
+.contactUs .map iframe{
+  width: 100%;
+  padding: 5rem ;
+  border-radius: 2rem;
+  height: 100%;
+}
+.contactUs .contactDetails form{
+  width: 100%;
+height: 100%;
+padding: 5rem;
+
+
+
+
+}
+.contactUs .contactDetails form input, textarea{
+  width: 100%;
+  background-color: rgb(218, 216, 213);
+  text-transform: none;
+  padding: 1rem;
+  margin: 5px 0;
+  border-radius: 5px;
+
+}
+#message{
+  height: 15rem;
+  resize: none;
+}
+#submit{
+  background-color: #b21602;
+  color: white;
+  font-weight: bolder;
+  /* width: 40%; */
+  box-shadow: var(--box-shadow1);
+}
+
+
+@media (max-width: 1000px) {
+  .header .naavbar li a {
+    font-size: 1.2rem;
+    color: black;
+    padding: 0 0.3rem;
+  }
+  .naavbar #login,
+  .naavbar #signup {
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+  }
+}
+footer{
+  width: 100vw;
+  height: 10vh;
+  background-color: #b21602;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+@media (max-width: 858px) {
+  .naavbar .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 1s ease;
+    background-color: #eee;
+    display: none;
+  }
+  .naavbar .mainMenu li a {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  .naavbar #login,
+  .naavbar #signup {
+    font-size: 2rem;
+    padding: 0.2rem 1.6rem;
+  }
+  .naavbar .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .naavbar .openMenu {
+    display: block;
+  }
+  .about {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+  .about .pic {
+    text-align: center;
+    width: 80vw;
+  }
+  .about img {
+    width: 100%;
+    height: 50%;
+  }
+  .aboutData {
+    width: 80vw;
+
+  }
+  .contactUs > div {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .contactUs .map{
+    width: 100%;
+  }
+  .about h3{
+    text-align: center;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@keyframes animate {
+  0% {
+    background: url(../image/bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  25% {
+    background: url(../image/bg3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  50% {
+    background: url(../image/bg4.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  75% {
+    background: url(../image/bg2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    background: url(../image/bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Login CSS */
+.wrapper{
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: #333;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background:url(/image/gcuLogin.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto auto;
+}
+
+.modelForm{
+  width: 400px;
+  min-height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* border-bottom: 20px solid #b21602; */
+  padding: 1em;
+}
+.modelForm h1{
+  color: #b21602;
+  font-size: 2.5em;
+  border-bottom: 2px solid #b21602;
+}
+.actionBtns{
+  width: 80%;
+  margin: 1em;
+  background-color: #b21602;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+
+  
+
+
+}
+.moveBtn, .moveBtnsign{
+  position: absolute;
+  width: 50%;
+  height: 90%;
+  padding: 1em;
+  border-radius: 50px;
+  margin: 2px;
+  font-weight: bolder;
+  transform:translate(0%) ;
+  transition:all 0.2s ease-in-out ;
+
+
+}
+.actionBtn{
+  padding: 1em;
+  width: 50%;
+  background-color:transparent;
+  border-radius: 50px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.rightBtn{
+  transform:translate(98%) ;
+  transition:all 0.2s ease-in-out ;
+}
+.loginForm .form input{
+  display: block;
+  width: 300px ;
+  margin: 1.5em 0;
+  background-color: #eee;
+  padding: 1em 1.5em;
+  border-radius: 50px;
+  
+}
+
+.loginBtn, .signBtn{
+  width: 150px;
+  padding: .5em;
+  margin: .5em 0;
+  border-radius: 50px;
+  background-color: #b21602;
+  font-weight: bolder;
+  font-size: 1.5em;
+  cursor: pointer;
+
+}
+
+.forget{
+  font-size: 1.3em;
+  color: gray;
+  cursor: pointer;
+}
+
+.registerLogin, .registerSign{
+  padding: .5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 15em;
+
+}
+
+.registerLogin span, .registerSign span{
+  font-weight: bold;
+  color: #b21602;
+}
+
+.modelFormSign h1{
+  color: #b21602;
+  font-size: 2.5em;
+  border-bottom: 2px solid #b21602;
+}
+
+.oneline{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.5em 0;
+  gap: 1em;
+}
+
+.signForm .form input {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  background-color: #eee;
+  padding: 0.5em 1.5em;
+  border-radius: 50px;
+}
+.signForm .form .oneline input{
+  margin:0;
+
+
+}
+
+.modelFormSign{
+  width: 500px;
+  min-height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  /* border-bottom: 20px solid #b21602; */
+}
